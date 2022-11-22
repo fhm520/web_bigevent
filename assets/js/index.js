@@ -50,12 +50,12 @@ function getInfo() {
 //渲染头像
 function rederAvater (user) {
     //获取用户的名称
-    var name = user.username || user.nickname
+    var name = user.nickname || user.username
     //设置欢迎的文本
     $('#welcome').html('欢迎&nbsp; &nbsp;' + name)
     //按需渲染用户头像
     if(user.user_pic !== null) {
-        $('.layui-nav-img').attr('src', user_pic).show()
+        $('.layui-nav-img').attr('src', user.user_pic).show()
         $('.text-avater').hide()
     } else {
         $('.layui-nav-img').hide()
